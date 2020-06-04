@@ -30,6 +30,13 @@ touch config.yml
 git add -A
 git commit -m "Initial Commit"
 git push origin master
+echo "Enter your username:"
+read user_name
+git config --global user.name ${user_name}
+echo "Enter your email:"
+read user_email
+git config --global user.email ${user_email}
+git commit --amend --reset-author
 
 # Setup Python Virtual Environment
 python3 -m venv ~/.${repo_name}
